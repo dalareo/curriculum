@@ -3,11 +3,11 @@
 <style>
 .links line {
   stroke: #999;
-  stroke-opacity: 0.6;
+  stroke-opacity: 2;
 }
 .nodes circle {
   stroke: #fff;
-  stroke-width: 1.5px;
+  stroke-width: 0.5px;
 }
 svg {
   width: 100%;
@@ -47,7 +47,7 @@ d3.json("https://raw.githubusercontent.com/dalareo/curriculum/master/curriculum.
     .selectAll("circle")
     .data(graph.nodes)
     .enter().append("circle")
-      .attr("r", 5)
+      .attr("r", 10)
       .attr("fill", function(d) { return color(d.group); })
       .call(d3.drag()
           .on("start", dragstarted)
